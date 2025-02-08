@@ -1,0 +1,134 @@
+[gd_scene load_steps=13 format=3 uid="uid://blj03ljddshrs"]
+
+[ext_resource type="Script" path="res://Scripts/info_bar.gd" id="1_38l1h"]
+[ext_resource type="Texture2D" uid="uid://co6wra41oytbu" path="res://Asserts/Boards/data.png" id="1_fs0aw"]
+[ext_resource type="Script" path="res://Scripts/managers/day_manager.gd" id="3_wyo2s"]
+[ext_resource type="Texture2D" uid="uid://p7obmc5hrxoo" path="res://Asserts/Tokens/day.png" id="4_5v1en"]
+[ext_resource type="Script" path="res://Scripts/managers/affair_manager.gd" id="5_68hcn"]
+[ext_resource type="Texture2D" uid="uid://s3aufka50jmh" path="res://Asserts/Tokens/affair.png" id="5_u0smj"]
+[ext_resource type="PackedScene" uid="uid://b36u2qrpqtaar" path="res://Scenes/index_pivot.tscn" id="7_snf1f"]
+[ext_resource type="Texture2D" uid="uid://d3e7kafplfsk2" path="res://Asserts/Tokens/looper.png" id="8_ca48p"]
+[ext_resource type="Script" path="res://Scripts/managers/loop_manager.gd" id="8_ya52w"]
+[ext_resource type="Texture2D" uid="uid://c8f75bkhfexk8" path="res://Asserts/Tokens/extra_guage.png" id="9_hxsna"]
+[ext_resource type="Script" path="res://Scripts/managers/extra_gauge_manager.gd" id="10_m0bd4"]
+[ext_resource type="Script" path="res://Scripts/managers/step_manager.gd" id="12_feyi6"]
+
+[node name="InfoBar" type="Panel"]
+script = ExtResource("1_38l1h")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_fs0aw")
+centered = false
+
+[node name="DayManager" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_wyo2s")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="InfoPivot" type="TextureRect" parent="DayManager"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 305.0
+offset_right = 137.0
+offset_bottom = 433.0
+texture = ExtResource("4_5v1en")
+expand_mode = 1
+
+[node name="IndexPivot" type="TextureRect" parent="DayManager"]
+visible = false
+layout_mode = 0
+offset_left = 15.0
+offset_top = 539.0
+offset_right = 133.0
+offset_bottom = 657.0
+texture = ExtResource("4_5v1en")
+expand_mode = 1
+
+[node name="AffairManager" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_68hcn")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="InfoPivot" type="TextureRect" parent="AffairManager"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 306.0
+offset_right = 287.0
+offset_bottom = 434.0
+texture = ExtResource("5_u0smj")
+expand_mode = 1
+
+[node name="IndexPivot" parent="AffairManager" instance=ExtResource("7_snf1f")]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 540.0
+offset_right = 281.0
+offset_bottom = 658.0
+
+[node name="LoopManager" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_ya52w")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="InfoPivot" type="TextureRect" parent="LoopManager"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 305.0
+offset_right = 433.0
+offset_bottom = 433.0
+texture = ExtResource("8_ca48p")
+expand_mode = 1
+
+[node name="IndexPivot" type="TextureRect" parent="LoopManager"]
+visible = false
+layout_mode = 0
+offset_left = 312.0
+offset_top = 539.0
+offset_right = 430.0
+offset_bottom = 657.0
+texture = ExtResource("8_ca48p")
+expand_mode = 1
+
+[node name="ExtraGaugeManager" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_m0bd4")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="InfoPivot" type="TextureRect" parent="ExtraGaugeManager"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 304.0
+offset_right = 579.0
+offset_bottom = 432.0
+texture = ExtResource("9_hxsna")
+expand_mode = 1
+
+[node name="IndexPivot" type="TextureRect" parent="ExtraGaugeManager"]
+visible = false
+layout_mode = 0
+offset_left = 457.0
+offset_top = 539.0
+offset_right = 575.0
+offset_bottom = 657.0
+texture = ExtResource("9_hxsna")
+expand_mode = 1
+
+[node name="StepManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("12_feyi6")
+metadata/_edit_group_ = true

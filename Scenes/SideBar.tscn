@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://d07puqcvwkdpi"]
+
+[ext_resource type="Script" path="res://Scripts/side_bar.gd" id="1_ia6si"]
+[ext_resource type="Texture2D" uid="uid://s3aufka50jmh" path="res://Asserts/Tokens/affair.png" id="2_8as4f"]
+[ext_resource type="PackedScene" uid="uid://bxoxbrxm2ip1j" path="res://Scenes/token.tscn" id="3_j0lsr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g7e6r"]
+font_size = 32
+font_color = Color(0.0745098, 0.027451, 0.290196, 1)
+
+[node name="SideBar" type="Panel"]
+light_mask = 0
+custom_minimum_size = Vector2(450, 0)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 256.0
+tooltip_text = "aaa"
+script = ExtResource("1_ia6si")
+
+[node name="Toggle" type="Button" parent="."]
+layout_mode = 1
+offset_left = -128.0
+offset_top = 64.0
+offset_bottom = 192.0
+icon = ExtResource("2_8as4f")
+expand_icon = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.960784, 0.803922, 0.364706, 1)
+
+[node name="AffairEditor" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="AffairEditor"]
+layout_mode = 2
+text = "This is name"
+label_settings = SubResource("LabelSettings_g7e6r")
+
+[node name="VSplitContainer" type="VSplitContainer" parent="AffairEditor"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+split_offset = 10
+collapsed = true
+dragger_visibility = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AffairEditor"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="AffairEditor/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="Token" parent="AffairEditor/ScrollContainer/GridContainer" instance=ExtResource("3_j0lsr")]
+layout_mode = 2
+
+[node name="Token2" parent="AffairEditor/ScrollContainer/GridContainer" instance=ExtResource("3_j0lsr")]
+layout_mode = 2
+
+[node name="Token3" parent="AffairEditor/ScrollContainer/GridContainer" instance=ExtResource("3_j0lsr")]
+layout_mode = 2
+
+[node name="Token4" parent="AffairEditor/ScrollContainer/GridContainer" instance=ExtResource("3_j0lsr")]
+layout_mode = 2
+
+[connection signal="pressed" from="Toggle" to="." method="_on_toggle_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2ega1oaba7xe"]
+
+[ext_resource type="Texture2D" uid="uid://bip7ud0mt6dg2" path="res://Asserts/CharCards/ai.png" id="1_1a27k"]
+[ext_resource type="Script" path="res://Scripts/card.gd" id="1_yvb8f"]
+
+[node name="Card" type="Panel"]
+script = ExtResource("1_yvb8f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1a27k")
+centered = false

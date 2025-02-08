@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://bny13r4vwiadj"]
+
+[ext_resource type="PackedScene" uid="uid://ckj2ya1akyk0p" path="res://Scenes/composed_board.tscn" id="1_hbmdu"]
+[ext_resource type="Script" path="res://Scripts/compose/player_camera.gd" id="2_2n8jy"]
+[ext_resource type="PackedScene" uid="uid://c2ega1oaba7xe" path="res://Scenes/card.tscn" id="2_am7cf"]
+[ext_resource type="PackedScene" uid="uid://bnfj4bvcxokah" path="res://Scenes/Chara/chara_basic.tscn" id="3_6cn02"]
+
+[node name="Test" type="Node"]
+
+[node name="GameBoard" parent="." instance=ExtResource("1_hbmdu")]
+
+[node name="Card" parent="GameBoard" instance=ExtResource("2_am7cf")]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 212.0
+offset_right = 18.0
+offset_bottom = 212.0
+scale = Vector2(0.5, 0.5)
+
+[node name="chara_basic" parent="GameBoard" instance=ExtResource("3_6cn02")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 648.0
+offset_right = 25.0
+offset_bottom = 648.0
+scale = Vector2(0.5, 0.5)
+paranoia_limit = 1
+paranoia = 0
+goodwill = 0
+intrigue = 0
+hope = 0
+despair = 0
+acquainted = 0
+perished = 0
+dead = 0
+chara_name = &"无名氏"
+location = 0
+can_right = false
+can_preview = false
+
+[node name="chara_basic2" parent="GameBoard" instance=ExtResource("3_6cn02")]
+layout_mode = 0
+offset_left = 671.0
+offset_top = 218.0
+offset_right = 671.0
+offset_bottom = 218.0
+scale = Vector2(0.5, 0.5)
+paranoia_limit = 1
+paranoia = 0
+goodwill = 0
+intrigue = 0
+hope = 0
+despair = 0
+acquainted = 0
+perished = 0
+dead = 0
+chara_name = &"无名氏"
+location = 0
+can_right = false
+can_preview = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(1200, 0)
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("2_2n8jy")

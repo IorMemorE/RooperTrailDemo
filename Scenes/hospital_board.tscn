@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cttkcfdp1w534"]
+
+[ext_resource type="Script" path="res://Scripts/compose/basic_board.gd" id="1_hwmn2"]
+[ext_resource type="Texture2D" uid="uid://cgs81kbvkne2e" path="res://Asserts/Boards/hospital.png" id="2_rvum4"]
+[ext_resource type="PackedScene" uid="uid://b6bvum3jq1e1l" path="res://Scenes/intrigue_aera.tscn" id="3_15ix3"]
+[ext_resource type="PackedScene" uid="uid://chrlutamdmcs4" path="res://Scenes/owner_area.tscn" id="4_iis2h"]
+
+[node name="HospitalBoard" type="Panel"]
+clip_contents = true
+custom_minimum_size = Vector2(1520, 1080)
+offset_right = 1520.0
+offset_bottom = 1080.0
+mouse_filter = 1
+script = ExtResource("1_hwmn2")
+board_name = "Hospital"
+board_id = 1
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+editor_description = "显示City的面板
+1519*1076"
+texture = ExtResource("2_rvum4")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="IntrigueAera" parent="." instance=ExtResource("3_15ix3")]
+
+[node name="OwnerArea" parent="." instance=ExtResource("4_iis2h")]

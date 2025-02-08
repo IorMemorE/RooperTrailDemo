@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b36u2qrpqtaar"]
+
+[ext_resource type="Texture2D" uid="uid://s3aufka50jmh" path="res://Asserts/Tokens/affair.png" id="1_rcjdd"]
+
+[node name="IndexPivot" type="TextureRect"]
+visible = false
+offset_right = 118.0
+offset_bottom = 118.0
+texture = ExtResource("1_rcjdd")
+expand_mode = 1

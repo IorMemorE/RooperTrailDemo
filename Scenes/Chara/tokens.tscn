@@ -1,0 +1,125 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0ohcywpxipgr"]
+
+[ext_resource type="PackedScene" uid="uid://bhvh1viodirav" path="res://Scenes/token_bundle.tscn" id="1_rrmqp"]
+[ext_resource type="Script" path="res://Scripts/chara/chara_tokens.gd" id="1_vtale"]
+[ext_resource type="Texture2D" uid="uid://oia1ghyobuxh" path="res://Asserts/Tokens/goodwill.png" id="2_jfmkd"]
+[ext_resource type="Texture2D" uid="uid://8k1lpqe0kwpg" path="res://Asserts/Tokens/paranoia.png" id="3_auc8f"]
+[ext_resource type="Texture2D" uid="uid://f2y2b4b3rk5u" path="res://Asserts/Tokens/intrigue.png" id="4_mcjef"]
+[ext_resource type="Texture2D" uid="uid://dakpwxxcxsd5k" path="res://Asserts/Tokens/acquainted.png" id="5_3pyw8"]
+[ext_resource type="Texture2D" uid="uid://c27yphyhvdcvd" path="res://Asserts/Tokens/perished.png" id="6_6a2ku"]
+[ext_resource type="Texture2D" uid="uid://di5u3x5uxu804" path="res://Asserts/Tokens/dead.png" id="7_4i7yv"]
+[ext_resource type="Texture2D" uid="uid://ogcb87kc5xum" path="res://Asserts/Tokens/hope.png" id="8_ks0xf"]
+[ext_resource type="Texture2D" uid="uid://d2gr0jdsgm0w0" path="res://Asserts/Tokens/despair.png" id="9_oi1fk"]
+
+[node name="Tokens" type="GridContainer"]
+offset_right = 315.0
+offset_bottom = 320.0
+columns = 3
+script = ExtResource("1_vtale")
+
+[node name="Goodwill" parent="." instance=ExtResource("1_rrmqp")]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="Goodwill/Token" index="0"]
+scale = Vector2(0.5, 0.51)
+texture = ExtResource("2_jfmkd")
+
+[node name="Paranoia" parent="." instance=ExtResource("1_rrmqp")]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="Paranoia/Token" index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_auc8f")
+
+[node name="Intrigue" parent="." instance=ExtResource("1_rrmqp")]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="Intrigue/Token" index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_mcjef")
+
+[node name="Acquainted" parent="." instance=ExtResource("1_rrmqp")]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="Acquainted/Token" index="0"]
+position = Vector2(10, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_3pyw8")
+
+[node name="Counter" parent="Acquainted" index="1"]
+visible = false
+
+[node name="Perished" parent="." instance=ExtResource("1_rrmqp")]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="Perished/Token" index="0"]
+position = Vector2(10, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_6a2ku")
+
+[node name="Counter" parent="Perished" index="1"]
+visible = false
+
+[node name="Dead" parent="." instance=ExtResource("1_rrmqp")]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="Dead/Token" index="0"]
+position = Vector2(10, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_4i7yv")
+
+[node name="Counter" parent="Dead" index="1"]
+visible = false
+
+[node name="Hope" parent="." instance=ExtResource("1_rrmqp")]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="Hope/Token" index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ks0xf")
+
+[node name="Counter" parent="Hope" index="1"]
+visible = false
+
+[node name="Despair" parent="." instance=ExtResource("1_rrmqp")]
+visible = false
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="Despair/Token" index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_oi1fk")
+
+[node name="Counter" parent="Despair" index="1"]
+visible = false
+
+[editable path="Goodwill"]
+[editable path="Goodwill/Token"]
+[editable path="Paranoia"]
+[editable path="Paranoia/Token"]
+[editable path="Intrigue"]
+[editable path="Intrigue/Token"]
+[editable path="Acquainted"]
+[editable path="Acquainted/Token"]
+[editable path="Perished"]
+[editable path="Perished/Token"]
+[editable path="Dead"]
+[editable path="Dead/Token"]
+[editable path="Hope"]
+[editable path="Hope/Token"]
+[editable path="Despair"]
+[editable path="Despair/Token"]

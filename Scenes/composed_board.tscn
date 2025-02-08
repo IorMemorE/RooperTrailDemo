@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckj2ya1akyk0p"]
+
+[ext_resource type="PackedScene" uid="uid://blj03ljddshrs" path="res://Scenes/info_bar.tscn" id="1_d3qji"]
+[ext_resource type="Script" path="res://Scripts/compose/game_board.gd" id="1_yer5i"]
+[ext_resource type="PackedScene" uid="uid://cttkcfdp1w534" path="res://Scenes/hospital_board.tscn" id="1_yrlv1"]
+[ext_resource type="PackedScene" uid="uid://pwgh3ksrtrnt" path="res://Scenes/shrine_board.tscn" id="2_7dshe"]
+[ext_resource type="PackedScene" uid="uid://dt7wbxwmsi5jw" path="res://Scenes/city_board.tscn" id="3_qvw67"]
+[ext_resource type="PackedScene" uid="uid://uh6vy2lm1t8f" path="res://Scenes/school_board.tscn" id="4_opdoc"]
+
+[node name="GameBoard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yer5i")
+
+[node name="InfoBar" parent="." instance=ExtResource("1_d3qji")]
+layout_mode = 0
+offset_left = -591.0
+offset_top = -1080.0
+offset_right = -591.0
+offset_bottom = -1080.0
+metadata/_edit_lock_ = true
+
+[node name="HospitalBoard" parent="." groups=["Board"] instance=ExtResource("1_yrlv1")]
+layout_mode = 0
+offset_top = -1080.0
+offset_bottom = 0.0
+
+[node name="ShrineBoard" parent="." groups=["Board"] instance=ExtResource("2_7dshe")]
+layout_mode = 0
+offset_left = 1520.0
+offset_top = -1080.0
+offset_right = 3040.0
+offset_bottom = 0.0
+
+[node name="CityBoard" parent="." groups=["Board"] instance=ExtResource("3_qvw67")]
+layout_mode = 0
+
+[node name="SchoolBoard" parent="." groups=["Board"] instance=ExtResource("4_opdoc")]
+layout_mode = 0
+offset_left = 1520.0
+offset_right = 3040.0

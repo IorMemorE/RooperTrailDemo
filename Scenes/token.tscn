@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxoxbrxm2ip1j"]
+
+[ext_resource type="Script" path="res://Scripts/token.gd" id="1_2elpa"]
+[ext_resource type="Texture2D" uid="uid://neakcyw6l4o1" path="res://Asserts/Icons/clock.png" id="2_b20pr"]
+
+[node name="Token" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_default_cursor_shape = 6
+script = ExtResource("1_2elpa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_b20pr")
+centered = false

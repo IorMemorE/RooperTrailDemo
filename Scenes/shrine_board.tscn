@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://pwgh3ksrtrnt"]
+
+[ext_resource type="Script" path="res://Scripts/compose/basic_board.gd" id="1_j5kel"]
+[ext_resource type="Texture2D" uid="uid://bfsthytxkflg0" path="res://Asserts/Boards/shrine.png" id="2_ijvdx"]
+[ext_resource type="PackedScene" uid="uid://b6bvum3jq1e1l" path="res://Scenes/intrigue_aera.tscn" id="3_vu4dg"]
+[ext_resource type="PackedScene" uid="uid://chrlutamdmcs4" path="res://Scenes/owner_area.tscn" id="5_t4e1y"]
+
+[node name="ShrineBoard" type="Panel"]
+clip_contents = true
+custom_minimum_size = Vector2(1520, 1080)
+offset_right = 1520.0
+offset_bottom = 1080.0
+mouse_filter = 1
+script = ExtResource("1_j5kel")
+board_name = "Shirine"
+board_id = 2
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+editor_description = "显示City的面板
+1519*1076"
+texture = ExtResource("2_ijvdx")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="IntrigueAera" parent="." instance=ExtResource("3_vu4dg")]
+position = Vector2(1105, 0)
+
+[node name="OwnerArea2" parent="." instance=ExtResource("5_t4e1y")]
+position = Vector2(538, 2)
