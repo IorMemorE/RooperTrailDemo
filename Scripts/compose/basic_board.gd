@@ -28,4 +28,3 @@ func _ready() -> void:
 	custom_minimum_size = std_size
 	if sprite.texture:
 		sprite.scale = std_size / sprite.texture.get_size()
-		# print(sprite.scale)
