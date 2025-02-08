@@ -9,10 +9,12 @@ enum LocationKind {
 	City,
 	School,
 }
-
-var sprite:Sprite2D 
+@onready
+var sprite:Sprite2D  = $Sprite2D
 @onready
 var intrigue_area:IntrigueArea = $IntrigueAera 
+@onready
+var owner_area:OwnerArea = $OwnerArea
 
 @export 
 var board_name := "None"
@@ -23,9 +25,7 @@ func get_intrigue() -> int:
 	return intrigue_area.intrigue
 
 func _ready() -> void:
-	if !sprite:
-		sprite = $Sprite2D
 	custom_minimum_size = std_size
 	if sprite.texture:
 		sprite.scale = std_size / sprite.texture.get_size()
-		print(sprite.scale)
+		# print(sprite.scale)

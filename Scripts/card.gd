@@ -14,5 +14,3 @@ func _ready() -> void:
 	if sprite.texture:
 		sprite.scale = std_size / sprite.texture.get_size()
 
-
-

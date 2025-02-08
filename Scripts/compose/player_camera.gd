@@ -13,8 +13,8 @@ func _input(event: InputEvent) -> void:
 			handle_mouse_button(event)
 		InputEventMouseMotion:
 			handle_drag(event)
-		var ty:
-			print(ty)
+		_:
+			pass
 	match event:
 		_ when event as InputEventMouseButton:
 			handle_mouse_button(event)

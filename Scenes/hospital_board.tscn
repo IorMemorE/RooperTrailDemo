@@ -26,3 +26,5 @@ metadata/_edit_lock_ = true
 [node name="IntrigueAera" parent="." instance=ExtResource("3_15ix3")]
 
 [node name="OwnerArea" parent="." instance=ExtResource("4_iis2h")]
+
+[editable path="OwnerArea"]
