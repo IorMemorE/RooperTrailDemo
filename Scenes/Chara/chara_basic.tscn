@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnfj4bvcxokah"]
 
 [ext_resource type="PackedScene" uid="uid://c2ega1oaba7xe" path="res://Scenes/card.tscn" id="1_7lim7"]
-[ext_resource type="Script" path="res://Scenes/Chara/chara_basic.gd" id="2_866gh"]
+[ext_resource type="Script" path="res://Scripts/chara/chara_basic.gd" id="2_866gh"]
 [ext_resource type="PackedScene" uid="uid://c0ohcywpxipgr" path="res://Scenes/Chara/tokens.tscn" id="3_ygmg4"]
 
 [node name="chara_basic" instance=ExtResource("1_7lim7")]

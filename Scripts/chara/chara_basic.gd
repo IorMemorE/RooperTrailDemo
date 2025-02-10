@@ -115,4 +115,8 @@ var disable_locations :Array[BasicBoard.LocationKind] = [] as Array[BasicBoard.L
 var tokens:CharaTokens = $Tokens
 
 func _ready():
+	super._ready()
 	is_ready = true
+
+# func _input(event: InputEvent) -> void:
+# 	print(event)
